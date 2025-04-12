@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Text</title>
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+        }
+
+        /* Container for the text */
+        .text-container {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Styling for each word */
+        .word {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #e74c3c;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1.5s ease-out forwards;
+            margin: 10px;
+        }
+
+        /* Animating the words with delay */
+        .word:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .word:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .word:nth-child(3) {
+            animation-delay: 2s;
+        }
+
+        .word:nth-child(4) {
+            animation-delay: 3s;
+        }
+
+        /* Animation effect */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Add a glowing text effect */
+        .word:hover {
+            text-shadow: 0 0 10px #fff, 0 0 20px #e74c3c, 0 0 30px #e74c3c, 0 0 40px #e74c3c;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-container">
+        <div class="word">HAII SELAMAT ULANG TAHUN YAH</div>
+        <div class="word">SEMOGA KAMU SEHAT SELALU DAN PANJANG UMUR DAN MAKIN CANTIK🫣</div>
+        <div class="word">HEHEHE TUHAN MEMBERKATI KAMU SEKELUARGA.</div>
+        <div class="word">Amsal 3:2 "karena panjang umur dan lanjut usia
+            serta sejahtera akan ditambahkannya kepadamu."</div>
+    </div>
+
+    <script>
+        // Fungsi untuk mengarahkan otomatis setelah animasi selesai
+        setTimeout(function() {
+            // Ganti URL di bawah dengan URL Web 2 yang ingin Anda tuju
+            window.location.href = "http://127.0.0.1:5500/ultah/birthday-cake.html"; // Ganti dengan URL Web 2 Anda
+        }, 8000); // Menunggu 4 detik setelah animasi terakhir muncul
+    </script>
+</body>
+</html>
